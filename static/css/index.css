@@ -4,7 +4,7 @@ html, body {
 }
 
 button {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body[js=off] #no-js {
@@ -50,10 +50,9 @@ header .content .subtitle {
   font-family: "Manrope", sans-serif;
 }
 header .status {
-  background-color: #F5F5F5;
   border-radius: 5px;
   padding: 5px;
-  border: 1px solid #CCC;
+  border: 1px solid ;
   display: flex;
   align-items: center;
 }
@@ -383,6 +382,7 @@ footer {
   background-color: #FFF;
   padding: 10px;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 .admin-data {
