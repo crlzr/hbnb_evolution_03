@@ -20,14 +20,46 @@
         <!-- How do we fix this this? -->
         <h1>Please enable Javascript in your browser to view the site!</h1>
     </div>
-
+    <section id="options">
+        <div>
+            <i class="fa-solid fa-location-dot"></i>
+            <span> Destination</span>
+            <ul>
+            {% for country in countries %}
+            <li>{{ country.name }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+        <div>
+            <i class="fa-solid fa-house"></i>
+            <span> Amenities</span>
+            <ul>
+            {% for amenity in amenities %}
+                <li>{{ amenity.name }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+        <div class="price-range">
+            <i class="fa-solid fa-credit-card"></i>
+            <span> Price</span>
+            <input type="range" id="price" name="price" min="0" max="500" value="0">
+            <span id="price-value">$0.00</span>
+        </div>
+        <div>
+            <i class="fa-solid fa-star"></i>
+            <span> Rating</span>
+            <input type="range" id="rating" name="rating" min="1" max="5" value="0">
+            <span id="rating-value">1 - 5</span>
+        </div>
+    </section>
     <section id="menu">
         <form class="contents" action="/" method="post">
+            <!--
             <div class="destination">
                 <div class="title">Destination</div>
                 <div class="choice">
-                    <!-- Don't forget that this html page is also used to display the search results -->
-                    <!-- The chunk of code below will re-select the 'All' radio button if it was chosen previously -->
+                    <!-- Don't forget that this html page is also used to display the search results
+                    <!-- The chunk of code below will re-select the 'All' radio button if it was chosen previously
                     {% set all_dest_checked = "checked" %}
                     {% if selected and "destination" in selected %}
                         {% if selected["destination"] != "" %}
@@ -40,9 +72,10 @@
                             <span>All</span>
                         </label>
                     </span>
+                    -->
                     {% for country in countries %}
                         <!-- Don't forget that this html page is also used to display the search results -->
-                        <!-- The chunk of code below will re-select the radio button for the country chosen previously during form submission -->
+                        <!-- The chunk of code below will re-select the radio button for the country chosen previously during form submission -- >
                         {% set specific_dest_checked = "" %}
                         {% if selected and "destination" in selected %}
                             {% if selected["destination"] == country.code %}
@@ -58,6 +91,7 @@
                     {% endfor %}
                 </div>
             </div>
+            <!--
             <div class="amenities">
                 <div class="title">
                     <span class="text">Amenities</span>
@@ -67,7 +101,7 @@
                     </span>
                 </div>
                 <div class="choice">
-                    <!-- Same as with the destination radio inputs, we re-select what was previously selected during form submission -->
+                    <!-- Same as with the destination radio inputs, we re-select what was previously selected during form submission -- >
                     {% set all_amen_checked = "checked" %}
                     {% set specific_amen_checked = "" %}
                     {% if selected and "amenities" in selected %}
@@ -99,7 +133,7 @@
                         <div class="items">
                             {% set amenity_item_selected = "checked" %}
                             {% for amenity in amenities %}
-                                <!-- Re-select the checkboxes that were previously chosen -->
+                                <!-- Re-select the checkboxes that were previously chosen -- >
                                 {% if selected and "amenities" in selected %}
                                     {% if selected["amenities"] != "" and selected["amenities"]|length > 0 %}
                                         {% set amenity_item_selected = "" %}
@@ -123,6 +157,7 @@
             <div class="search">
                 <button id="btn-menu-search" type="submit">Search &raquo;</button>
             </div>
+            -->
         </form>
     </section>
     <section id="results">
@@ -130,7 +165,7 @@
             {% include "results.html" %}
         {% else %}
             <div class="none">
-                <h1>Please run the Search above to find available properties!</h1>
+                <!-- <h1>Please run the Search above to find available properties!</h1> -->
             </div>
         {% endif %}
     </section>

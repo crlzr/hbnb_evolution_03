@@ -1,9 +1,8 @@
 html, body {
     margin: 0;
     padding: 0 0 30px 0;
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 10px;
-    background-color: #FFF;
+    // font-family: "Manrope", sans-serif;
+    // font-size: 10px;
 }
 
 button {
@@ -34,9 +33,14 @@ body[js=off] {
 header {
     width: 100%;
     border-bottom: 2px solid #C5C5FF;
+    background: #152F41;
     padding: 10px;
     display: flex;
     box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+    color: #64E9CF;
+
+
 
     .content {
         flex: 1;
@@ -44,11 +48,13 @@ header {
         .title {
             font-size: 36px;
             font-weight: 700;
-            font-style: italic;
+            //font-style: italic;
+            font-family: "Manrope", sans-serif;
         }
         .subtitle {
             font-size: 24px;
             padding-left: 5px;
+            font-family: "Manrope", sans-serif;
         }
     }
 
@@ -81,6 +87,60 @@ header {
     }
 }
 
+#options {
+    font-size: 24px;
+    font-family: "Manrope", sans-serif;
+    color:#64E9CF;
+    display: flex;
+    justify-content: center;
+
+    > div {
+        width: 200px;
+        height: 60px;
+        background-color: #152F41;
+        text-align: center;
+        margin: 0 5px;
+        line-height: 60px;
+    }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            text-align: left;
+            padding: 0 0 0 10px;
+
+
+            li {
+            color: #152F41;
+            height: 36px;
+            font-size: 20px;
+            line-height: 36px;
+            padding-left: 15px;
+        }
+    }
+
+        input[type="range"] {
+          -webkit-appearance: none;
+          width: 100%;
+          height: 5px; // height of the search bar
+          background: #ddd;
+          outline: none;
+          opacity: 0.8;
+          transition: opacity 0.2s;
+
+          &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px; // with and height of scroll button
+            height: 25px;
+            background: #64E9CF;
+            cursor: pointer;
+            border-radius: 50%;
+          }
+        }
+      }
+
+
 #menu {
     width: 100%;
     background: linear-gradient(90deg,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 20%, rgba(0,0,0,0.2) 80%, rgba(0,0,0,0) 100%);
@@ -95,7 +155,7 @@ header {
         > .destination {
             flex: 7;
         }
-    
+
         > .amenities {
             margin-left: 20px;
             flex: 4;
@@ -132,7 +192,7 @@ header {
                 }
             }
         }
-    
+
         // Shared styles between the destination and amenities menu sections
         > .destination, .amenities {
             > .title {
@@ -141,13 +201,13 @@ header {
                 margin-bottom: 10px;
                 padding-top: 5px;
             }
-    
+
             > .choice {
                 font-size: 1.6rem;
-    
+
                 > span {
                     // prevent accidental highlighting of the text when choosing option
-                    user-select: none; 
+                    user-select: none;
 
                     > label {
                         padding: 8px 5px 5px 5px;
@@ -168,7 +228,7 @@ header {
                         > input[type=radio] {
                             margin-right: 0px;
                         }
-                    }                   
+                    }
                 }
             }
         }
@@ -177,7 +237,7 @@ header {
             width: 160px;
             margin-left: 20px;
             align-items: center;
-    
+
             > button {
                 width: 100%;
                 height: 100%;
@@ -420,7 +480,7 @@ footer {
             &:nth-child(1) {
                 width: 200px;
             }
-            
+
             &:nth-child(2) {
                 width: 120px;
             }
@@ -450,7 +510,7 @@ footer {
             white-space: nowrap;
             overflow-x: clip;
         }
-        
+
         &:nth-child(2) {
             width: 100px;
         }
@@ -589,7 +649,7 @@ footer {
         > .row {
             font-size: 0;     // whitespaces go away
             display: flex;
-            
+
             &:nth-child(2n+2) {
                 background-color: #D5D5D5;
             }

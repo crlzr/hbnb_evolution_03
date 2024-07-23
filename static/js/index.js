@@ -10,7 +10,7 @@ hbnb = {
         for (let elem of amenRadios) {
             elem.addEventListener("change", function(e) {
             let specificSelectedText = document.querySelector("#menu >.contents >.amenities >.title .selected")
-            
+
                 let radioValue = e.target.value
                 if (radioValue == 'specific') {
                     hbnb.showSpecificAmenitiesSubmenu();
@@ -74,11 +74,32 @@ hbnb = {
         }
 
         specificCount.innerHTML = checkedCount
+
+    },
+    priceSliderInit: function() {
+        let price = document.getElementById("price")
+        let priceValue = document.getElementById("price-value") // id
+        price.addEventListener("input", () => {
+            // console.log(price.value)
+            priceValue.innerHTML = "$" + price.value + ".00"
+        })
+    },
+    ratingSliderInit: function() {
+        let rating = document.getElementById("rating")
+        let ratingValue = document.getElementById("rating-value") // id
+        price.addEventListener("input", () => {
+            //console.log(rating.value)
+            ratingValue.innerHTML = rating.value
+        })
     },
     init: function() {
-        hbnb.amenitiesInit();
+      //  hbnb.amenitiesInit();
+        hbnb.priceSliderInit();
+        hbnb.ratingSliderInit();
     }
+
 }
+
 
 window.onload = function() {
     // We add something to the web site to indicate that JS is active
