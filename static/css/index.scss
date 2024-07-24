@@ -94,6 +94,8 @@ header {
     display: flex;
     justify-content: center;
 
+
+
     > div {
         width: 200px;
         height: 60px;
@@ -101,13 +103,13 @@ header {
         text-align: center;
         margin: 0 5px;
         line-height: 60px;
-    }
 
         ul {
             list-style: none;
             margin: 0;
             text-align: left;
             padding: 0 0 0 10px;
+            visibility: hidden;
 
 
             li {
@@ -118,6 +120,11 @@ header {
             padding-left: 15px;
         }
     }
+}
+
+        > div:hover > div > ul {
+            visibility: visible;
+}
 
         input[type="range"] {
           -webkit-appearance: none;

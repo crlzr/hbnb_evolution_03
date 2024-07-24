@@ -24,20 +24,24 @@
         <div>
             <i class="fa-solid fa-location-dot"></i>
             <span> Destination</span>
-            <ul>
-            {% for country in countries %}
-            <li>{{ country.name }}</li>
-            {% endfor %}
-            </ul>
+            <div>
+                <ul>
+                {% for country in countries %}
+                <li>{{ country.name }}</li>
+                {% endfor %}
+                </ul>
+            </div>
         </div>
         <div>
             <i class="fa-solid fa-house"></i>
             <span> Amenities</span>
-            <ul>
-            {% for amenity in amenities %}
-                <li>{{ amenity.name }}</li>
-            {% endfor %}
-            </ul>
+            <div>
+                <ul>
+                {% for amenity in amenities %}
+                    <li>{{ amenity.name }}</li>
+                {% endfor %}
+                </ul>
+            </div>
         </div>
         <div class="price-range">
             <i class="fa-solid fa-credit-card"></i>
