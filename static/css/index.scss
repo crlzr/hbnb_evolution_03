@@ -9,6 +9,10 @@ button {
     font-family: "Josefin Sans", sans-serif;
 }
 
+a {
+    color: #64E9CF;
+}
+
 body[js=off] {
     #no-js {
         display: flex;
@@ -59,10 +63,10 @@ header {
     }
 
     .status {
-        background-color: #F5F5F5;
+        // background-color: #F5F5F5;
         border-radius: 5px;
-        padding: 5px;
-        border: 1px solid #CCC;
+        padding: 8px;
+        //border: 1px solid #CCC;
         display: flex;
         align-items: center;
 
