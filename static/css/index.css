@@ -7,6 +7,10 @@ button {
   font-family: "Josefin Sans", sans-serif;
 }
 
+a {
+  color: #64E9CF;
+}
+
 body[js=off] #no-js {
   display: flex;
   z-index: 9999;
@@ -50,10 +54,8 @@ header .content .subtitle {
   font-family: "Manrope", sans-serif;
 }
 header .status {
-  background-color: #F5F5F5;
   border-radius: 5px;
-  padding: 5px;
-  border: 1px solid #CCC;
+  padding: 8px;
   display: flex;
   align-items: center;
 }
