@@ -36,6 +36,9 @@ def results():
 
     searched_destination = formdata.get('destination-radio-group')
     searched_amenities = formdata.get('amenities-radio-group')
+    ######### TO DO: add functionality to get price and rating data ##############
+    #searched_price = formdata.get('will work this out later')
+    #searched_rating = formdata.get('will work this out later')
 
     # NOTE: Python flask has a weird way of handling the checkboxes values grouped in an array
     if searched_amenities != "":

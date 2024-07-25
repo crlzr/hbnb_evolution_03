@@ -32,72 +32,73 @@
         <!-- How do we fix this this? -->
         <h1>Please enable Javascript in your browser to view the site!</h1>
     </div>
-    <section id="options">
-        <div>
-            <i class="fa-solid fa-location-dot"></i>
-            <span> Destination</span>
+    <form class="contents" action="/" method="post">
+        <section id="options">
             <div>
-                <ul>
-                    <li>
-                        <input type="radio" name="destination-radio-group" value=""/>
-                        All
-                    </li>
-                    {% for country in countries %}
-                    <li>
-                        <input type="radio" name="destination-radio-group" value=""/>
-                        {{ country.name }}
-                    </li>
-                    {% endfor %}
-                </ul>
+                <i class="fa-solid fa-location-dot"></i>
+                <span> Destination</span>
+                <div>
+                    <ul>
+                        <li>
+                            <input type="radio" name="destination-radio-group" value="" checked/>
+                            All
+                        </li>
+                        {% for country in countries %}
+                        <li>
+                            <input type="radio" name="destination-radio-group" value=""/>
+                            {{ country.name }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
-        </div>
 
-        <div>
-            <i class="fa-solid fa-house"></i>
-            <span> Amenities</span>
             <div>
-                <ul>
-                    <li>
-                        <input type="radio" name="amenity-radio-group" value=""/>
-                        All
-                    </li>
-                    <li>
-                        <input type="radio" name="amenity-radio-group" value=""/>
-                        Any
-                    </li>
-                    {% for amenity in amenities %}
-                    <li>
-                        <input type="checkbox" name="amenity-radio-group" value=""/>
-                        {{ amenity.name }}
-                    </li>
-                    {% endfor %}
-                </ul>
+                <i class="fa-solid fa-house"></i>
+                <span> Amenities</span>
+                <div>
+                    <ul>
+                        <li>
+                            <input type="radio" name="amenity-radio-group" value="" checked/>
+                            All
+                        </li>
+                        <li>
+                            <input type="radio" name="amenity-radio-group" value=""/>
+                            Any
+                        </li>
+                        {% for amenity in amenities %}
+                        <li>
+                            <input type="checkbox" name="amenity-radio-group" value=""/>
+                            {{ amenity.name }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
-        </div>
 
-        <div class="price-range">
-            <i class="fa-solid fa-credit-card"></i>
-            <span> Price</span>
-            <input type="range" id="price" name="price" min="0" max="500" value="0">
-            <span id="price-value">$0.00</span>
-        </div>
+            <div class="price-range">
+                <i class="fa-solid fa-credit-card"></i>
+                <span> Price</span>
+                <input type="range" id="price" name="price" min="0" max="500" value="0">
+                <span id="price-value">$0.00</span>
+            </div>
 
-        <div>
-            <i class="fa-solid fa-star"></i>
-            <span> Rating</span>
-            <input type="range" id="rating" name="rating" min="1" max="5" value="0">
-            <span id="rating-value">1 - 5</span>
-        </div>
+            <div>
+                <i class="fa-solid fa-star"></i>
+                <span> Rating</span>
+                <input type="range" id="rating" name="rating" min="1" max="5" value="0">
+                <span id="rating-value">1 - 5</span>
+            </div>
 
-        <!-- SEARCH BUTTON? -->
-        <div class="search">
-            <button id="btn-menu-search" type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-        </div>
-    </section>
+            <div class="search">
+                <button id="btn-menu-search" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </section>
+    </form>
     <section id="menu">
-        <form class="contents" action="/" method="post">
+        <!--<form class="contents" action="/" method="post">-->
             <!--
             <div class="destination">
                 <div class="title">Destination</div>
@@ -202,14 +203,17 @@
                 <button id="btn-menu-search" type="submit">Search &raquo;</button>
             </div>
             -->
-        </form>
+        <!--</form>-->
     </section>
     <section id="results">
         {% if places %}
-            {% include "results.html" %}
+            {# include "results.html" #}
+            <div class="none">
+                you searched, good job!
+            </div>
         {% else %}
             <div class="none">
-                <!-- <h1>Please run the Search above to find available properties!</h1> -->
+                this is a placeholder for a pre-search message
             </div>
         {% endif %}
     </section>
