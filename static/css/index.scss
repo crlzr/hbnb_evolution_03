@@ -44,8 +44,6 @@ header {
     font-family: "Manrope", sans-serif;
     color: #64E9CF;
 
-
-
     .content {
         flex: 1;
 
@@ -150,7 +148,6 @@ header {
           }
         }
       }
-
 
 #menu {
     width: 100%;
@@ -709,5 +706,26 @@ footer {
                 font-size: 1.6rem;
             }
         }
+    }
+}
+
+input[type=radio], [type=checkbox]{
+    width: 13px;
+    height: 13px;
+    background-color: white;
+    border: 1px solid #152F41;
+    border-radius: 50%;
+    vertical-align: middle;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    margin: 3px 3px 0px 5px;
+
+    &:hover{
+        border: 1px solid black;}
+
+    &:checked{
+        background-color: #64E9CF;
     }
 }
