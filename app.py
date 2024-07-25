@@ -22,6 +22,7 @@ def index():
 
     return render_template('index.html', countries=countries, amenities=amenities)
 
+'''
 # This endpoint is meant to handle the data submitted by the 'traditional' form post that I have included in the sample HTML
 @app.route('/', methods=["POST"])
 def results():
@@ -58,6 +59,16 @@ def results():
     # print(selected)
 
     return render_template('index.html', countries=countries, amenities=amenities, places=country_city_places, selected=selected)
+'''
+
+@app.route('/', methods=["POST"])
+def results():
+    """ Results page after form post """
+    # Load the data we need before passing it to the template
+    countries = Country.all(True)
+    amenities = Amenity.all(True)
+
+    return render_template('index.html', countries=countries, amenities=amenities)
 
 @app.route('/admin')
 def admin():
