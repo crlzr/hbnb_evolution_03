@@ -41,14 +41,14 @@
                     <ul>
                         <li>
                             <label>
-                                <input type="radio" name="destination-radio-group" value="" checked/>
+                                <input type="radio" name="destination-radio-group" value="All" checked/>
                                 All
                             </label>
                         </li>
                         {% for country in countries %}
                         <li>
                             <label>
-                                <input type="radio" name="destination-radio-group" value=""/>
+                                <input type="radio" name="destination-radio-group" value="{{ country.code }}"/>
                                 {{ country.name }}
                             </label>
                         </li>
@@ -64,20 +64,20 @@
                     <ul>
                         <li>
                             <label>
-                                <input type="radio" name="amenity-radio-group" value="" checked/>
+                                <input type="radio" name="amenity-radio-group" value="All"/>
                                 All
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" name="amenity-radio-group" value=""/>
+                                <input type="radio" name="amenity-radio-group" value="Any" checked/>
                                 Any
                             </label>
                         </li>
                         {% for amenity in amenities %}
                         <li>
                             <label>
-                                <input type="checkbox" name="amenity-radio-group" value=""/>
+                                <input type="checkbox" name="amenity-radio-group" value="{{ amenity.id }}"/>
                                 {{ amenity.name }}
                             </label>
                         </li>
@@ -217,10 +217,7 @@
     </section>
     <section id="results">
         {% if places %}
-            {# include "results.html" #}
-            <div class="none">
-                you searched, good job!
-            </div>
+            {% include "results.html" %}
         {% else %}
             <div class="none">
                 <!--this is a placeholder for a pre-search message-->

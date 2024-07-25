@@ -308,7 +308,7 @@ class Country(Base):
             where_and = " AND "
 
         # If a specific country was selected
-        if country_code != "":
+        if country_code != "All":
             query_txt = query_txt + where_and + "co.code = '" + country_code + "'"
 
         # Subquery complete!

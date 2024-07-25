@@ -64,11 +64,26 @@ def results():
 @app.route('/', methods=["POST"])
 def results():
     """ Results page after form post """
+    if request.form is None:
+        abort(400, "No form data submitted")
+
+    # get form data
+    formdata = request.form
+
+    # sort form data by type
+    searched_destination = formdata.get('destination-radio-group')
+#    searched_amenities = formdata.get('amenity-radio-group')
+#    print("##################### searched amenities #####################")
+#    print(searched_amenities)
+#    searched_price = 
+#    searched_rating = 
+
     # Load the data we need before passing it to the template
     countries = Country.all(True)
     amenities = Amenity.all(True)
+    seached_places = Country.places(searched_destination)
 
-    return render_template('index.html', countries=countries, amenities=amenities)
+    return render_template('index.html', countries=countries, amenities=amenities, places=seached_places)
 
 @app.route('/admin')
 def admin():
