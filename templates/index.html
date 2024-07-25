@@ -38,9 +38,15 @@
             <span> Destination</span>
             <div>
                 <ul>
-                    <li>All</li>
+                    <li>
+                        <input type="radio" name="destination-radio-group" value=""/>
+                        All
+                    </li>
                     {% for country in countries %}
-                    <li>{{ country.name }}</li>
+                    <li>
+                        <input type="radio" name="destination-radio-group" value=""/>
+                        {{ country.name }}
+                    </li>
                     {% endfor %}
                 </ul>
             </div>
@@ -51,10 +57,19 @@
             <span> Amenities</span>
             <div>
                 <ul>
-                    <li>All</li>
-                    <li>Any</li>
+                    <li>
+                        <input type="radio" name="amenity-radio-group" value=""/>
+                        All
+                    </li>
+                    <li>
+                        <input type="radio" name="amenity-radio-group" value=""/>
+                        Any
+                    </li>
                     {% for amenity in amenities %}
-                    <li>{{ amenity.name }}</li>
+                    <li>
+                        <input type="radio" name="amenity-radio-group" value=""/>
+                        {{ amenity.name }}
+                    </li>
                     {% endfor %}
                 </ul>
             </div>
