@@ -40,13 +40,17 @@
                 <div>
                     <ul>
                         <li>
-                            <input type="radio" name="destination-radio-group" value="" checked/>
-                            All
+                            <label>
+                                <input type="radio" name="destination-radio-group" value="" checked/>
+                                All
+                            </label>
                         </li>
                         {% for country in countries %}
                         <li>
-                            <input type="radio" name="destination-radio-group" value=""/>
-                            {{ country.name }}
+                            <label>
+                                <input type="radio" name="destination-radio-group" value=""/>
+                                {{ country.name }}
+                            </label>
                         </li>
                         {% endfor %}
                     </ul>
@@ -59,17 +63,23 @@
                 <div>
                     <ul>
                         <li>
-                            <input type="radio" name="amenity-radio-group" value="" checked/>
-                            All
+                            <label>
+                                <input type="radio" name="amenity-radio-group" value="" checked/>
+                                All
+                            </label>
                         </li>
                         <li>
-                            <input type="radio" name="amenity-radio-group" value=""/>
-                            Any
+                            <label>
+                                <input type="radio" name="amenity-radio-group" value=""/>
+                                Any
+                            </label>
                         </li>
                         {% for amenity in amenities %}
                         <li>
-                            <input type="checkbox" name="amenity-radio-group" value=""/>
-                            {{ amenity.name }}
+                            <label>
+                                <input type="checkbox" name="amenity-radio-group" value=""/>
+                                {{ amenity.name }}
+                            </label>
                         </li>
                         {% endfor %}
                     </ul>
@@ -213,7 +223,7 @@
             </div>
         {% else %}
             <div class="none">
-                this is a placeholder for a pre-search message
+                <!--this is a placeholder for a pre-search message-->
             </div>
         {% endif %}
     </section>
