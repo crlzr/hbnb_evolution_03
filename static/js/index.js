@@ -87,7 +87,7 @@ hbnb = {
     ratingSliderInit: function() {
         let rating = document.getElementById("rating")
         let ratingValue = document.getElementById("rating-value") // id
-        price.addEventListener("input", () => {
+        rating.addEventListener("input", () => {
             //console.log(rating.value)
             ratingValue.innerHTML = rating.value
         })
@@ -100,15 +100,6 @@ hbnb = {
 
 }
 
-
-window.onload = function() {
-    // We add something to the web site to indicate that JS is active
-    // otherwise a big scary message will appear
-    let body = document.getElementsByTagName("body")[0];
-    body.setAttribute("js", "ok");
-
-    hbnb.init();
-}
 
 // So I'm pretty sure that you've all noticed that the code above is difficult to maintain.
 // Just to access the radio inputs for Amenities, I had to use some crazy long selector string like:

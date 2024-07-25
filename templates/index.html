@@ -12,8 +12,20 @@
     <script type="text/javascript" src="../static/js/index.js"></script>
     <title>HBnB Evolution Part 03</title>
 </head>
+
 <body pg-name="index" js="off">
     {% include "header.html" %}
+
+    <script>
+        window.onload = function() {
+            // We add something to the web site to indicate that JS is active
+            // otherwise a big scary message will appear
+            let body = document.getElementsByTagName("body")[0];
+            body.setAttribute("js", "ok");
+
+            hbnb.init();
+        }
+        </script>
 
     <div id="no-js">
         <!-- There will be a brief flash-of-unstyled-content where this message appears -->
@@ -32,6 +44,7 @@
                 </ul>
             </div>
         </div>
+
         <div>
             <i class="fa-solid fa-house"></i>
             <span> Amenities</span>
