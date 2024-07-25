@@ -91,6 +91,9 @@ header .status > .bubble.down {
   margin: 0 5px;
   line-height: 60px;
 }
+#options > div.search {
+  width: 60px;
+}
 #options > div ul {
   list-style: none;
   margin: 0;
