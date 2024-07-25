@@ -38,9 +38,10 @@
             <span> Destination</span>
             <div>
                 <ul>
-                {% for country in countries %}
-                <li>{{ country.name }}</li>
-                {% endfor %}
+                    <li>All</li>
+                    {% for country in countries %}
+                    <li>{{ country.name }}</li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
@@ -50,9 +51,11 @@
             <span> Amenities</span>
             <div>
                 <ul>
-                {% for amenity in amenities %}
+                    <li>All</li>
+                    <li>Any</li>
+                    {% for amenity in amenities %}
                     <li>{{ amenity.name }}</li>
-                {% endfor %}
+                    {% endfor %}
                 </ul>
             </div>
         </div>
