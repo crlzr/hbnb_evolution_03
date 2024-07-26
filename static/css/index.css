@@ -314,7 +314,7 @@ header .status > .bubble.down {
   margin: 10px;
 }
 #results > .listings > .country_group > .country_name {
-  font-size: 3.2rem;
+  font-size: 2.5rem;
   margin: 10px 0;
   padding: 5px 0;
 }
@@ -328,7 +328,7 @@ header .status > .bubble.down {
   padding: 10px;
 }
 #results > .listings > .country_group > .cities > .city_group > .city_name {
-  font-size: 2.6rem;
+  font-size: 2rem;
   margin-bottom: 10px;
   padding: 8px 0;
 }
@@ -338,7 +338,7 @@ header .status > .bubble.down {
   margin-bottom: 5px;
 }
 #results > .listings .place > .name {
-  font-size: 2rem;
+  font-size: 1.5rem;
   border-bottom: 1px solid #999;
   margin-bottom: 10px;
   padding: 10px 0;
@@ -347,6 +347,11 @@ header .status > .bubble.down {
   font-size: 1.4rem;
   position: relative;
   display: flex;
+}
+#results > .listings .place > .details .photo {
+  width: 300px;
+  height: 337px;
+  object-fit: contain;
 }
 #results > .listings .place > .details > div {
   height: 52px;
