@@ -82,6 +82,7 @@ header .status > .bubble.down {
   color: #64E9CF;
   display: flex;
   justify-content: center;
+  padding: 5px 0 0 0;
 }
 #options > div {
   width: 200px;
