@@ -106,9 +106,10 @@ header .status > .bubble.down {
 }
 #options > div ul {
   list-style: none;
+  background-color: #64E9CF;
   margin: 0;
   text-align: left;
-  padding: 0 0 0 10px;
+  padding: 5px 0 10px 10px;
   visibility: hidden;
 }
 #options > div ul li {
@@ -599,7 +600,7 @@ input[type=radio]:hover, [type=checkbox]:hover {
   border: 1px solid black;
 }
 input[type=radio]:checked, [type=checkbox]:checked {
-  background-color: #64E9CF;
+  background-color: #152F41;
 }
 
 /*# sourceMappingURL=index.css.map */

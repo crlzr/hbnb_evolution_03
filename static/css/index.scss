@@ -121,9 +121,10 @@ header {
 
         ul {
             list-style: none;
+            background-color: #64E9CF;
             margin: 0;
             text-align: left;
-            padding: 0 0 0 10px;
+            padding: 5px 0 10px 10px;
             visibility: hidden;
 
 
@@ -298,8 +299,6 @@ header {
             transform: rotate(90deg);
         }
     }
-
-
 
     > .instruct {
         font-size: 1.6rem;
@@ -739,6 +738,6 @@ input[type=radio], [type=checkbox]{
         border: 1px solid black;}
 
     &:checked{
-        background-color: #64E9CF;
+        background-color: #152F41;
     }
 }
