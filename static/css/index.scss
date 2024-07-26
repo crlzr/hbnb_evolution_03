@@ -142,11 +142,15 @@ header {
         }
     }
 
+    .price-rating-box{
+        margin: -10px 0 0 0;
+    }
+
     input[type="range"] {
           -webkit-appearance: none;
-          width: 100%;
+          width: 90%;
           height: 5px; // height of the search bar
-          background: #ddd;
+          background: #64E9CF;
           outline: none;
           opacity: 0.8;
           transition: opacity 0.2s;
@@ -154,9 +158,9 @@ header {
           &::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
-            width: 25px; // with and height of scroll button
-            height: 25px;
-            background: #64E9CF;
+            width: 15px; // with and height of scroll button
+            height: 15px;
+            background: #152F41;
             cursor: pointer;
             border-radius: 50%;
         }
@@ -344,6 +348,7 @@ header {
     width: 100%;
     min-height: 100%;
     font-size: 1.8rem;
+    padding: 100px 0 0 0;
 
     ul, li {
         margin: 0;

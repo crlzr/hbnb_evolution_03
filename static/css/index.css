@@ -122,11 +122,14 @@ header .status > .bubble.down {
 #options > div:hover > div > ul {
   visibility: visible;
 }
+#options .price-rating-box {
+  margin: -10px 0 0 0;
+}
 #options input[type=range] {
   -webkit-appearance: none;
-  width: 100%;
+  width: 90%;
   height: 5px;
-  background: #ddd;
+  background: #64E9CF;
   outline: none;
   opacity: 0.8;
   transition: opacity 0.2s;
@@ -134,9 +137,9 @@ header .status > .bubble.down {
 #options input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 25px;
-  height: 25px;
-  background: #64E9CF;
+  width: 15px;
+  height: 15px;
+  background: #152F41;
   cursor: pointer;
   border-radius: 50%;
 }
@@ -288,6 +291,7 @@ header .status > .bubble.down {
   width: 100%;
   min-height: 100%;
   font-size: 1.8rem;
+  padding: 100px 0 0 0;
 }
 #results ul, #results li {
   margin: 0;
