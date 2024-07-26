@@ -73,15 +73,15 @@ def results():
     # sort form data by type
     searched_destination = formdata.get('destination-radio-group')
     searched_amenities = formdata.getlist('amenity-checkbox-group')
-#    searched_price = 
+    searched_price = formdata.get('price')
 #    searched_rating = 
 
     # Load the data we need before passing it to the template
     countries = Country.all(True)
     amenities = Amenity.all(True)
-    seached_places = Country.places(searched_destination, searched_amenities)
+    searched_places = Country.places(searched_destination, searched_amenities, searched_price)
 
-    return render_template('index.html', countries=countries, amenities=amenities, places=seached_places)
+    return render_template('index.html', countries=countries, amenities=amenities, places=searched_places)
 
 @app.route('/admin')
 def admin():
