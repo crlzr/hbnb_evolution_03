@@ -307,7 +307,9 @@ header .status > .bubble.down {
   text-align: center;
 }
 #results > .listings > .country_group {
-  background-color: rgba(0, 0, 0, 0.1);
+  font-family: "Manrope", sans-serif;
+  color: #64E9CF;
+  background-color: #152F41;
   padding: 10px;
   margin: 10px;
 }
@@ -320,7 +322,9 @@ header .status > .bubble.down {
   font-family: "Flags";
 }
 #results > .listings > .country_group > .cities > .city_group {
-  background-color: rgba(0, 0, 0, 0.1);
+  font-family: "Manrope", sans-serif;
+  color: #152F41;
+  background-color: #64E9CF;
   padding: 10px;
 }
 #results > .listings > .country_group > .cities > .city_group > .city_name {
