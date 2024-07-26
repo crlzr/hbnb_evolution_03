@@ -334,6 +334,7 @@ header .status > .bubble.down {
 }
 #results > .listings > .country_group > .cities > .city_group > ul {
   display: flex;
+  flex-wrap: wrap;
 }
 #results > .listings .place {
   border-color: #152F41;
