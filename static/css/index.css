@@ -91,6 +91,9 @@ header .status > .bubble.down {
   margin: 0 5px;
   line-height: 60px;
 }
+#options > div:hover {
+  filter: brightness(85%);
+}
 #options > div.search {
   width: 60px;
   background-color: #64E9CF;
@@ -103,6 +106,9 @@ header .status > .bubble.down {
   height: 60px;
   font-size: 24px;
   color: #152F41;
+}
+#options > div.search:hover {
+  filter: brightness(90%);
 }
 #options > div ul {
   list-style: none;
@@ -419,6 +425,7 @@ footer {
   background-color: #FFF;
   padding: 10px;
   box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
 }
 
 .admin-data {
