@@ -311,7 +311,7 @@ class Country(Base):
         if country_code != "All":
             query_txt = query_txt + where_and + "co.code = '" + country_code + "'"
 
-        if price != 0:
+        if price != "0":
             query_txt = query_txt + where_and + "pl.price_per_night <= " + str(price)
 
         # Subquery complete!
