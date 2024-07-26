@@ -125,6 +125,9 @@ header .status > .bubble.down {
 #options .price-rating-box {
   margin: -10px 0 0 0;
 }
+#options .box-text {
+  margin: -20px 0 0 0;
+}
 #options input[type=range] {
   -webkit-appearance: none;
   width: 90%;
