@@ -332,12 +332,16 @@ header .status > .bubble.down {
   margin-bottom: 10px;
   padding: 8px 0;
 }
+#results > .listings > .country_group > .cities > .city_group > ul {
+  display: flex;
+}
 #results > .listings .place {
   border-color: #152F41;
   border-style: solid;
   padding: 10px;
-  margin-bottom: 5px;
+  margin: 0 10px 5px 0;
   width: 300px;
+  height: 490px;
 }
 #results > .listings .place > .name {
   font-size: 1.5rem;
@@ -377,11 +381,11 @@ header .status > .bubble.down {
   font-size: 1.2rem;
 }
 #results > .listings .place > .details > .price > .accommodations {
-  font-size: 1.7rem;
+  font-size: 1.2rem;
   display: inline;
   margin-right: 0;
   position: absolute;
-  top: 2px;
+  top: 6px;
   right: 0px;
 }
 #results > .listings .place > .details > .description {

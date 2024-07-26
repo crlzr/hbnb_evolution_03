@@ -396,6 +396,10 @@ header {
                         margin-bottom: 10px;
                         padding: 8px 0;
                     }
+
+                    > ul {
+                    display: flex;
+                    }
                 }
             }
         }
@@ -404,8 +408,9 @@ header {
             border-color: #152F41;
             border-style: solid;
             padding: 10px;
-            margin-bottom: 5px;
+            margin: 0 10px 5px 0;
             width: 300px;
+            height: 490px;
 
             > .name {
                 font-size: 1.5rem;
@@ -450,11 +455,11 @@ header {
                         font-size: 1.2rem;
                     }
                     > .accommodations {
-                        font-size: 1.7rem;
+                        font-size: 1.2rem;
                         display: inline;
                         margin-right: 0;
                         position: absolute;
-                        top: 2px;
+                        top: 6px;
                         right: 0px;
                     }
                 }
