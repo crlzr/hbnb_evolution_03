@@ -405,6 +405,7 @@ header {
             border-style: solid;
             padding: 10px;
             margin-bottom: 5px;
+            width: 300px;
 
             > .name {
                 font-size: 1.5rem;
@@ -449,9 +450,12 @@ header {
                         font-size: 1.2rem;
                     }
                     > .accommodations {
-                        font-size: 2rem;
+                        font-size: 1.7rem;
                         display: inline;
                         margin-right: 0;
+                        position: absolute;
+                        top: 2px;
+                        right: 0px;
                     }
                 }
 

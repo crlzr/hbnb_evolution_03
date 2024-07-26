@@ -337,6 +337,7 @@ header .status > .bubble.down {
   border-style: solid;
   padding: 10px;
   margin-bottom: 5px;
+  width: 300px;
 }
 #results > .listings .place > .name {
   font-size: 1.5rem;
@@ -376,9 +377,12 @@ header .status > .bubble.down {
   font-size: 1.2rem;
 }
 #results > .listings .place > .details > .price > .accommodations {
-  font-size: 2rem;
+  font-size: 1.7rem;
   display: inline;
   margin-right: 0;
+  position: absolute;
+  top: 2px;
+  right: 0px;
 }
 #results > .listings .place > .details > .description {
   width: 280px;
