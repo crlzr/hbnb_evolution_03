@@ -401,15 +401,22 @@ header {
         }
 
         .place {
-            background-color: rgba(0,0,0,0.1);
+            border-color: #152F41;
+            border-style: solid;
             padding: 10px;
             margin-bottom: 5px;
 
             > .name {
                 font-size: 1.5rem;
-                border-bottom: 1px solid #999;
                 margin-bottom: 10px;
-                padding: 10px 0;
+            }
+
+            > .address {
+                font-size: 1.0rem;
+                width: 300px;
+                line-height: 1.3;
+                display: flex;
+                align-items: center;
             }
 
             > .details {
@@ -426,35 +433,31 @@ header {
                 > div {
                     height: 52px;
                     margin-right: 10px;
-                    padding: 0 5px;
-
-                    &:nth-child(2n) {
-                        background-color: rgba(255,255,255,0.2);
-                    }
+                    padding: 0 0 0 5px;
                 }
 
                 > .price {
                     width: 120px;
 
                     > .digits {
-                        font-size: 4rem;
+                        display: inline;
+                        font-size: 2.0rem;
                     }
 
                     > .pax{
+                        display: inline;
                         font-size: 1.2rem;
+                    }
+                    > .accommodations {
+                        font-size: 2rem;
+                        display: inline;
+                        margin-right: 0;
                     }
                 }
 
                 > .description {
                     width: 280px;
                     font-size: 1.6rem;
-                    line-height: 1.3;
-                    display: flex;
-                    align-items: center;
-                }
-
-                > .address {
-                    width: 300px;
                     line-height: 1.3;
                     display: flex;
                     align-items: center;
@@ -474,21 +477,6 @@ header {
                     }
                 }
 
-                > .accommodations {
-                    font-size: 2rem;
-                    position: absolute;
-                    top: -45px;
-                    right: 0;
-                    margin-right: 0;
-
-                    > span {
-                        margin-left: 10px;
-
-                        > i {
-                            margin-right: 5px;
-                        }
-                    }
-                }
             }
         }
     }
