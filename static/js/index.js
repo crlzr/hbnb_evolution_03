@@ -92,11 +92,26 @@ hbnb = {
             ratingValue.innerHTML = rating.value
         })
     },
+
+    revealHiddenElement: function() {
+        let place = document.getElementsByClassName("place")
+
+        let allPlaces = function() {
+            this.className = (this.className == 'place') ? 'placeOpen' : 'place'
+        };
+
+        for (let i = 0; i < place.length; i++) {
+            place[i].addEventListener('click', allPlaces, false);
+        }
+    },
+
     init: function() {
       //  hbnb.amenitiesInit();
         hbnb.priceSliderInit();
         hbnb.ratingSliderInit();
+        hbnb.revealHiddenElement();
     }
+
 }
 
 window.onload = function() {
