@@ -16,18 +16,9 @@
 <body pg-name="index" js="off">
     {% include "header.html" %}
 
-    <script>
-        window.onload = function() {
-            // We add something to the web site to indicate that JS is active
-            // otherwise a big scary message will appear
-            let body = document.getElementsByTagName("body")[0];
-            body.setAttribute("js", "ok");
 
-            hbnb.init();
-        }
-        </script>
 
-    <div id="no-js">
+    <div id="no-js" style="visibility: hidden;">
         <!-- There will be a brief flash-of-unstyled-content where this message appears -->
         <!-- How do we fix this this? -->
         <h1>Please enable Javascript in your browser to view the site!</h1>
@@ -107,12 +98,13 @@
                     </div>
                 </div>
             </div>
-
             <div class="search">
-                <button id="btn-menu-search" type="submit">
+            <button id="btn-menu-search" type="submit" class="pushable">
+                <span class="front">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </div>
+                </span>
+              </button>
+              </div>
         </section>
     </form>
     <section id="menu">
@@ -234,5 +226,6 @@
     </section>
 
     {% include "footer.html" %}
+    <noscript><style>body { visibility: visible; }</style></noscript>
 </body>
 </html>

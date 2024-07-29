@@ -109,6 +109,7 @@ header {
             filter:brightness(85%);
         }
 
+
         &.search{
             width: 60px;
             background-color: #64E9CF;
@@ -121,6 +122,10 @@ header {
                 height: 60px;
                 font-size: 24px;
                 color: #152F41;
+            }
+
+            button:active {
+                transform: translateY(3px);
             }
 
             &:hover{

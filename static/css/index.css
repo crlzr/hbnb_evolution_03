@@ -108,6 +108,9 @@ header .status > .bubble.down {
   font-size: 24px;
   color: #152F41;
 }
+#options > div.search button:active {
+  transform: translateY(3px);
+}
 #options > div.search:hover {
   filter: brightness(90%);
 }

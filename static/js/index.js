@@ -97,9 +97,18 @@ hbnb = {
         hbnb.priceSliderInit();
         hbnb.ratingSliderInit();
     }
-
 }
 
+window.onload = function() {
+    // We add something to the web site to indicate that JS is active
+    // otherwise a big scary message will appear
+    let body = document.getElementsByTagName("body")[0];
+    body.setAttribute("js", "ok");
+    document.body.style.visibility = 'visible';
+
+    hbnb.init();
+
+}
 
 // So I'm pretty sure that you've all noticed that the code above is difficult to maintain.
 // Just to access the radio inputs for Amenities, I had to use some crazy long selector string like:
