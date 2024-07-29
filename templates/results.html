@@ -30,18 +30,17 @@
                                     <span class="guests"><i class="fa-solid fa-person"></i>{{ place.max_guests }}</span>
                                 </div>
                             </div>
-                            <div class="description">{{ place.description }}</div>
-                            <!--
-                            <div class="amenities">
-                                {% if place.amenities %}
-                                    {% for amenity in place.amenities %}
-                                    <span>{{ amenity }}</span>
-                                    {% endfor %}
-                                {% else %}
-                                    No amenities!
-                                {% endif %}
-                            </div>
-                            -->
+                        </div>
+                        <div class="description">{{ place.description }}</div>
+
+                        <div class="amenities">
+                            {% if place.amenities %}
+                                {% for amenity in place.amenities %}
+                                <span>{{ amenity }}</span>
+                                {% endfor %}
+                            {% else %}
+                                No amenities!
+                            {% endif %}
                         </div>
                     </li>
                 {% endfor %}
