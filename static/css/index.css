@@ -401,23 +401,10 @@ header .status > .bubble.down {
   right: 0px;
 }
 #results > .listings .place .description_amenities > .description {
-  width: 280px;
-  font-size: 1.6rem;
-  line-height: 1.3;
   display: none;
-  align-items: center;
 }
 #results > .listings .place .description_amenities > .amenities {
-  flex: 1;
   display: none;
-  align-items: center;
-}
-#results > .listings .place .description_amenities > .amenities > span {
-  background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 16px;
-  padding: 8px 8px 5px 8px;
-  margin-right: 5px;
-  line-height: 1.4rem;
 }
 #results > .listings .place_open {
   border-color: #152F41;
@@ -474,8 +461,10 @@ header .status > .bubble.down {
   top: 6px;
   right: 0px;
 }
+#results > .listings .place_open .description_amenities {
+  padding: 0 10px 0 10px;
+}
 #results > .listings .place_open .description_amenities > .description {
-  width: 280px;
   font-size: 1.6rem;
   line-height: 1.3;
   display: flex;
@@ -485,6 +474,7 @@ header .status > .bubble.down {
   flex: 1;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 #results > .listings .place_open .description_amenities > .amenities > span {
   background-color: rgba(255, 255, 255, 0.4);
