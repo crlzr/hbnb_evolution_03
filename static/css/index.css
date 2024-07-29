@@ -353,45 +353,46 @@ header .status > .bubble.down {
   margin: 0 10px 5px 0;
   width: 300px;
   height: 490px;
+  display: flex;
 }
-#results > .listings .place > .name {
+#results > .listings .place .place_closed > .name {
   font-size: 1.5rem;
   margin-bottom: 10px;
 }
-#results > .listings .place > .address {
+#results > .listings .place .place_closed > .address {
   font-size: 1rem;
   width: 300px;
   line-height: 1.3;
   display: flex;
   align-items: center;
 }
-#results > .listings .place > .details {
+#results > .listings .place .place_closed > .details {
   font-size: 1.4rem;
   position: relative;
   display: flex;
 }
-#results > .listings .place > .details .photo {
+#results > .listings .place .place_closed > .details .photo {
   width: 300px;
   height: 337px;
   object-fit: contain;
 }
-#results > .listings .place > .details > div {
+#results > .listings .place .place_closed > .details > div {
   height: 52px;
   margin-right: 10px;
   padding: 0 0 0 5px;
 }
-#results > .listings .place > .details > .price {
+#results > .listings .place .place_closed > .details > .price {
   width: 120px;
 }
-#results > .listings .place > .details > .price > .digits {
+#results > .listings .place .place_closed > .details > .price > .digits {
   display: inline;
   font-size: 2rem;
 }
-#results > .listings .place > .details > .price > .pax {
+#results > .listings .place .place_closed > .details > .price > .pax {
   display: inline;
   font-size: 1.2rem;
 }
-#results > .listings .place > .details > .price > .accommodations {
+#results > .listings .place .place_closed > .details > .price > .accommodations {
   font-size: 1.2rem;
   display: inline;
   margin-right: 0;
@@ -399,19 +400,19 @@ header .status > .bubble.down {
   top: 6px;
   right: 0px;
 }
-#results > .listings .place > .description {
+#results > .listings .place .description_amenities > .description {
   width: 280px;
   font-size: 1.6rem;
   line-height: 1.3;
   display: none;
   align-items: center;
 }
-#results > .listings .place > .amenities {
+#results > .listings .place .description_amenities > .amenities {
   flex: 1;
   display: none;
   align-items: center;
 }
-#results > .listings .place > .amenities > span {
+#results > .listings .place .description_amenities > .amenities > span {
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 16px;
   padding: 8px 8px 5px 8px;
@@ -425,46 +426,47 @@ header .status > .bubble.down {
   margin: 0 10px 5px 0;
   width: 100%;
   height: 490px;
+  display: flex;
 }
-#results > .listings .placeOpen > .name {
+#results > .listings .placeOpen .place_closed > .name {
   font-size: 1.5rem;
   margin-bottom: 10px;
 }
-#results > .listings .placeOpen > .address {
+#results > .listings .placeOpen .place_closed > .address {
   font-size: 1rem;
   width: 300px;
   line-height: 1.3;
   display: flex;
   align-items: center;
 }
-#results > .listings .placeOpen > .details {
+#results > .listings .placeOpen .place_closed > .details {
   font-size: 1.4rem;
   position: relative;
   display: flex;
   width: 300px;
 }
-#results > .listings .placeOpen > .details .photo {
+#results > .listings .placeOpen .place_closed > .details .photo {
   width: 300px;
   height: 337px;
   object-fit: contain;
 }
-#results > .listings .placeOpen > .details > div {
+#results > .listings .placeOpen .place_closed > .details > div {
   height: 52px;
   margin-right: 10px;
   padding: 0 0 0 5px;
 }
-#results > .listings .placeOpen > .details > .price {
+#results > .listings .placeOpen .place_closed > .details > .price {
   width: 120px;
 }
-#results > .listings .placeOpen > .details > .price > .digits {
+#results > .listings .placeOpen .place_closed > .details > .price > .digits {
   display: inline;
   font-size: 2rem;
 }
-#results > .listings .placeOpen > .details > .price > .pax {
+#results > .listings .placeOpen .place_closed > .details > .price > .pax {
   display: inline;
   font-size: 1.2rem;
 }
-#results > .listings .placeOpen > .details > .price > .accommodations {
+#results > .listings .placeOpen .place_closed > .details > .price > .accommodations {
   font-size: 1.2rem;
   display: inline;
   margin-right: 0;
@@ -472,19 +474,19 @@ header .status > .bubble.down {
   top: 6px;
   right: 0px;
 }
-#results > .listings .placeOpen > .description {
+#results > .listings .placeOpen .description_amenities > .description {
   width: 280px;
   font-size: 1.6rem;
   line-height: 1.3;
   display: flex;
   align-items: center;
 }
-#results > .listings .placeOpen > .amenities {
+#results > .listings .placeOpen .description_amenities > .amenities {
   flex: 1;
   display: flex;
   align-items: center;
 }
-#results > .listings .placeOpen > .amenities > span {
+#results > .listings .placeOpen .description_amenities > .amenities > span {
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 16px;
   padding: 8px 8px 5px 8px;
