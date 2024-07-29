@@ -403,7 +403,7 @@ header .status > .bubble.down {
   width: 280px;
   font-size: 1.6rem;
   line-height: 1.3;
-  display: flex;
+  display: none;
   align-items: center;
 }
 #results > .listings .place > .details > .amenities {
@@ -425,7 +425,6 @@ header .status > .bubble.down {
   margin: 0 10px 5px 0;
   width: 300px;
   height: 490px;
-  background-color: red;
 }
 #results > .listings .placeOpen > .name {
   font-size: 1.5rem;
