@@ -97,7 +97,7 @@ hbnb = {
         let place = document.getElementsByClassName("place")
 
         let allPlaces = function() {
-            this.className = (this.className == 'place') ? 'placeOpen' : 'place'
+            this.className = (this.className == 'place') ? 'place_open' : 'place'
         };
 
         for (let i = 0; i < place.length; i++) {
