@@ -243,7 +243,7 @@ class Country(Base):
         return jsonify(output)
 
     @staticmethod
-    def places(country_code = "", amenities = "", price = 0):
+    def places(country_code = "", amenities = "", max_price = 500, min_price = 0):
         """ The big one! Everything we need is in here! """
 
         # --- Full SQL query Example ---
@@ -310,9 +310,14 @@ class Country(Base):
         # If a specific country was selected
         if country_code != "All":
             query_txt = query_txt + where_and + "co.code = '" + country_code + "'"
+            where_and = " AND "
 
-        if price != "0":
-            query_txt = query_txt + where_and + "pl.price_per_night <= " + str(price)
+        if max_price != "500":
+            query_txt = query_txt + where_and + "pl.price_per_night <= " + str(max_price)
+            where_and = " AND "
+
+        if min_price != "0":
+            query_txt = query_txt + where_and + "pl.price_per_night >= " + str(min_price)
 
         # Subquery complete!
         # Now, let's wrap it in the bigger GROUP BY query

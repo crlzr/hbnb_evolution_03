@@ -73,13 +73,14 @@ def results():
     # sort form data by type
     searched_destination = formdata.get('destination-radio-group')
     searched_amenities = formdata.getlist('amenity-checkbox-group')
-    searched_price = formdata.get('price')
+    max_price = formdata.get('max-price')
+    min_price = formdata.get('min-price')
 #    searched_rating = 
 
     # Load the data we need before passing it to the template
     countries = Country.all(True)
     amenities = Amenity.all(True)
-    searched_places = Country.places(searched_destination, searched_amenities, searched_price)
+    searched_places = Country.places(searched_destination, searched_amenities, max_price, min_price)
 
     return render_template('index.html', countries=countries, amenities=amenities, places=searched_places)
 
