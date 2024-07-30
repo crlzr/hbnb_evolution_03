@@ -105,11 +105,44 @@ hbnb = {
         }
     },
 
+    uncheckCheckbox: function() {
+
+        let groupCheck = Array.from(document.getElementsByName('amenity-checkbox-group'))
+        let anyCheck = document.getElementById('any')
+        let allCheck = document.getElementById('all')
+
+
+        groupCheck.forEach(element => {
+            element.onchange = () => {
+                anyCheck.checked = false;
+                allCheck.checked = false;
+            }
+        })
+
+        anyCheck.onchange = () => {
+            if (anyCheck.checked) {
+                groupCheck.forEach(element => {
+                    element.checked = false;
+                })
+            }
+        }
+
+        allCheck.onchange = () => {
+            if (allCheck.checked) {
+                groupCheck.forEach(element => {
+                    element.checked = true;
+                })
+            }
+        }
+    },
+
+
     init: function() {
       //  hbnb.amenitiesInit();
         hbnb.priceSliderInit();
         hbnb.ratingSliderInit();
         hbnb.revealHiddenElement();
+        hbnb.uncheckCheckbox();
     }
 
 }

@@ -55,20 +55,20 @@
                     <ul>
                         <li>
                             <label>
-                                <input type="radio" name="amenity-radio-group" value="All"/>
+                                <input id="all" type="radio" name="amenity-radio-group" value="All"/>
                                 All
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" name="amenity-radio-group" value="Any" checked/>
+                                <input id="any" type="radio" name="amenity-radio-group" value="Any" checked/>
                                 Any
                             </label>
                         </li>
                         {% for amenity in amenities %}
                         <li>
                             <label>
-                                <input type="checkbox" name="amenity-checkbox-group" value="{{ amenity.id }}"/>
+                                <input class="amenity_checkbox" type="checkbox" name="amenity-checkbox-group" value="{{ amenity.id }}"/>
                                 {{ amenity.name }}
                             </label>
                         </li>
