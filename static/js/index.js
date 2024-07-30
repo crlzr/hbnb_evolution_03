@@ -82,9 +82,15 @@ hbnb = {
         let priceValue = document.getElementById("price-value") // id
         minPrice.addEventListener("input", () => {
             priceValue.innerHTML = "$" + minPrice.value + ".00 - $" + maxPrice.value + ".00"
+            if (minPrice.value > maxPrice.value) {
+                maxPrice.value = minPrice.value;
+            }
         })
         maxPrice.addEventListener("input", () => {
             priceValue.innerHTML = "$" + minPrice.value + ".00 - $" + maxPrice.value + ".00"
+            if (maxPrice.value < minPrice.value) {
+                minPrice.value = maxPrice.value;
+            }
         })
     },
     ratingSliderInit: function() {
