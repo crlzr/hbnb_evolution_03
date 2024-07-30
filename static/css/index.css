@@ -363,10 +363,7 @@ header .status > .bubble.down {
   height: 490px;
   display: flex;
 }
-#results > .listings .place .description_amenities > .description {
-  display: none;
-}
-#results > .listings .place .description_amenities > .amenities {
+#results > .listings .place .description_amenities {
   display: none;
 }
 #results > .listings .place_open {

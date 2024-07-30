@@ -436,13 +436,7 @@ header {
             display: flex;
             
             .description_amenities {
-                > .description {
-                    display: none;  // to hide the description
-                }
-
-                > .amenities {
-                    display: none; // to hide amenities
-                }
+                display: none; // to hide description and amenities
             }
         }
         
