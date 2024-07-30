@@ -183,7 +183,7 @@ class Country(Base):
         except IndexError as exc:
             print("Error: ", exc)
             return "Unable to add new Country!"
-        
+
         return 'OK'
 
     @staticmethod
@@ -276,7 +276,7 @@ class Country(Base):
         output = {}
 
         where_and = " WHERE "
-        query_txt = "SELECT co.name AS country_name, ci.name AS city_name, pl.*, am.name as amenity_name \
+        query_txt = "SELECT co.name AS country_name, ci.name AS city_name, pl.*, am.name AS amenity_name, am.Awesome AS amenity_font \
             FROM countries co \
             LEFT JOIN cities ci ON co.id = ci.country_id \
             LEFT JOIN places pl ON ci.id = pl.city_id \
@@ -320,7 +320,8 @@ class Country(Base):
         query_txt = "SELECT id AS place_id, country_name, city_name, host_id, \
             name, description, address, number_of_rooms, number_of_bathrooms, \
             max_guests, price_per_night, latitude, longitude, \
-            GROUP_CONCAT(amenity_name) as amenities \
+            GROUP_CONCAT(amenity_name) as amenities, \
+            GROUP_CONCAT(amenity_font) as amenities_font \
             FROM (" + query_txt + ") x GROUP BY country_name, city_name, id"
 
         # This should give condense the results with the same country + city + place id
@@ -338,8 +339,10 @@ class Country(Base):
 
                 if row.city_name is not None:
                     amenities_array = []
+                    amenities_font_array = []
                     if row.amenities:
                         amenities_array = row.amenities.split(",")
+                        amenities_font_array = row.amenities_font.split(",")
 
                     output[row.country_name][row.city_name].append({
                         "city_name": row.city_name,
@@ -354,7 +357,8 @@ class Country(Base):
                         "latitude": row.latitude,
                         "longitude": row.longitude,
                         "host_id": row.host_id,
-                        "amenities": amenities_array
+                        "amenities": amenities_array,
+                        "amenities_font": amenities_font_array
                     })
 
         return output

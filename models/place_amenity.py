@@ -387,10 +387,10 @@ class Place(Base):
     def amenities_data():
         """ grab the data from the many to many table """
         query_txt = """
-            SELECT p.id AS place_id, p.name AS place_name, a.name AS amenity_name, a.id AS amenity_id
-            FROM place_amenity pa 
-            LEFT JOIN places p ON p.id = pa.place_id 
-            LEFT JOIN amenities a ON a.id = pa.amenity_id 
+            SELECT p.id AS place_id, p.name AS place_name, a.name AS amenity_name, a.id AS amenity_id a.Awesome AS amenity_font
+            FROM place_amenity pa
+            LEFT JOIN places p ON p.id = pa.place_id
+            LEFT JOIN amenities a ON a.id = pa.amenity_id
             ORDER BY p.name ASC, a.name ASC
         """
 
@@ -401,7 +401,8 @@ class Place(Base):
                 "place_id": row.place_id,
                 "place_name": row.place_name,
                 "amenity_name": row.amenity_name,
-                "amenity_id": row.amenity_id
+                "amenity_id": row.amenity_id,
+                "amenity_font": row.amenity_font
             })
 
         return output
@@ -561,8 +562,8 @@ class Amenity(Base):
 
         # 1. check if the pairing exists or not
         query_txt = """
-            SELECT * 
-            FROM place_amenity pa 
+            SELECT *
+            FROM place_amenity pa
             WHERE place_id = '""" + data['place'] + """' AND amenity_id = '""" + data['amenity'] + """'
         """
 

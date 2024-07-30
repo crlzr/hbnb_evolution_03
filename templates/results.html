@@ -37,8 +37,10 @@
                             <div class="description">{{ place.description }}</div>
                             <div class="amenities">
                                 {% if place.amenities %}
-                                    {% for amenity in place.amenities %}
-                                    <span>{{ amenity }}</span>
+                                    {% for amenity in place.amenities_font %}
+                                    <span>
+                                        <i class="fa-solid fa-{{ amenity }}"></i>
+                                    </span>
                                     {% endfor %}
                                 {% else %}
                                     No amenities!
