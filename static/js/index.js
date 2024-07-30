@@ -83,7 +83,7 @@ hbnb = {
         minPrice.addEventListener("input", () => {
 
             if (parseInt(minPrice.value) > parseInt(maxPrice.value)) {
-                maxPrice.value = minPrice.value;
+                minPrice.value = maxPrice.value;
             }
             priceValue.innerHTML = "$" + minPrice.value + ".00 - $" + maxPrice.value + ".00"
         })
