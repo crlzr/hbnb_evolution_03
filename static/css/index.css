@@ -135,6 +135,14 @@ header .status > .bubble.down {
 #options .price-rating-box {
   margin: -10px 0 0 0;
 }
+#options .price-rating-box #max-price {
+  position: relative;
+  top: -30px;
+}
+#options .price-rating-box #price-value {
+  position: relative;
+  top: -30px;
+}
 #options .box-text {
   margin: -20px 0 0 0;
 }
