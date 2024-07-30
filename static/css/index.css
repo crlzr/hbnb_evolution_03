@@ -95,6 +95,9 @@ header .status > .bubble.down {
 #options > div:hover {
   filter: brightness(85%);
 }
+#options > div:hover > div > ul {
+  visibility: visible;
+}
 #options > div.search {
   width: 60px;
   background-color: #64E9CF;
@@ -128,9 +131,6 @@ header .status > .bubble.down {
   font-size: 20px;
   line-height: 36px;
   padding-left: 15px;
-}
-#options > div:hover > div > ul {
-  visibility: visible;
 }
 #options .price-rating-box {
   margin: -10px 0 0 0;
